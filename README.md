@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Laluna Tailor Coupon Landing Page
 
-## Getting Started
+QR-code landing page for guests of Laluna Hoi An Riverside Hotel & Spa. Guests browse 4
+partner tailor shops, view info, and request a 10%-off coupon that's emailed to them
+(with the hotel CC'd). No database — coupon codes are generated on the fly and delivered
+by email only.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js (App Router) + TypeScript + Tailwind** — single page app, deployed as a static
+  frontend + serverless API route.
+- **`/api/coupon`** — Next.js Route Handler (runs as a Vercel serverless function) that
+  validates the form, generates a `LALUNA-XXXXXXXX` code, and sends the email.
+- **[Resend](https://resend.com)** — transactional email delivery.
+- **Zod** — request validation.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Copy the env template and fill in real values:
+   ```bash
+   cp .env.example .env.local
+   ```
+   - `RESEND_API_KEY` — from https://resend.com/api-keys
+   - `FROM_EMAIL` — an address on a domain verified in Resend (use `onboarding@resend.dev`
+     to test before your domain is verified)
+   - `HOTEL_EMAIL` — the hotel inbox that should be CC'd on every coupon email
+3. Run the dev server:
+   ```bash
+   npm run dev
+   ```
+   Open http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+- **Hotel logo**: drop the file at `public/logo.png` (displayed in the page header via
+  [components/HotelLogo.tsx](components/HotelLogo.tsx)). Until it's added, the header just
+  shows the hotel name text — no broken image icon.
+- **Shops** (name, address, logo, description/story): [lib/shops.ts](lib/shops.ts).
+  Drop logo images into [public/shops/](public/shops/) matching the filenames referenced
+  there. If a logo is missing, the card falls back to a circle with the shop's initials.
+- **Coupon form fields**: [lib/formFields.ts](lib/formFields.ts). This one file drives both
+  the rendered form and the server-side validation — add, remove, reorder, or change
+  required/optional there and both sides stay in sync.
+- **Email template / hotel branding**: [lib/email.ts](lib/email.ts).
+- **Coupon code format / discount %**: [lib/coupon.ts](lib/coupon.ts).
 
-To learn more about Next.js, take a look at the following resources:
+## Deploying to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push this repo to GitHub (or GitLab/Bitbucket).
+2. In [Vercel](https://vercel.com/new), import the repo — it auto-detects Next.js, no
+   config needed.
+3. Add the three environment variables from `.env.example` under **Project Settings →
+   Environment Variables** (`RESEND_API_KEY`, `FROM_EMAIL`, `HOTEL_EMAIL`).
+4. Deploy. Point your QR code at the resulting `*.vercel.app` URL (or a custom domain
+   added in Vercel's Domains settings).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For real deliverability, verify your own sending domain in Resend (Resend dashboard →
+Domains) and use an address on it for `FROM_EMAIL` — the shared `onboarding@resend.dev`
+sender is rate-limited and meant for testing only.

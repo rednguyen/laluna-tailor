@@ -10,6 +10,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Hotel brand gold, derived from #edac58 */
+  --color-brand-50: #fdf8f0;
+  --color-brand-tint: #f7e2b8;
+  --color-brand: #edac58;
+  --color-brand-hover: #dd9a3f;
+  --color-brand-active: #c3822b;
+  --color-brand-dark: #8a5a1f;
+  --color-brand-contrast: #3a2412;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +32,31 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
