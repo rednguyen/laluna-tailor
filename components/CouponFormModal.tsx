@@ -92,7 +92,7 @@ export default function CouponFormModal({ shop, onClose }: CouponFormModalProps)
                 value={values[field.name]}
                 onChange={(e) => handleChange(field.name, e.target.value)}
                 rows={3}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none"
               />
             ) : (
               <input
@@ -102,7 +102,7 @@ export default function CouponFormModal({ shop, onClose }: CouponFormModalProps)
                 placeholder={field.placeholder}
                 value={values[field.name]}
                 onChange={(e) => handleChange(field.name, e.target.value)}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none"
               />
             )}
           </div>
