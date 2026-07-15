@@ -53,9 +53,9 @@ export async function sendCouponEmail(args: SendCouponEmailArgs) {
   const fromEmail = process.env.FROM_EMAIL;
   const hotelEmail = process.env.HOTEL_EMAIL;
 
-  if (!apiKey || !fromEmail || !hotelEmail) {
+  if (!apiKey || !fromEmail) {
     throw new Error(
-      "Missing email configuration: RESEND_API_KEY, FROM_EMAIL, and HOTEL_EMAIL must be set."
+      "Missing email configuration: RESEND_API_KEY and FROM_EMAIL must be set."
     );
   }
 
