@@ -19,7 +19,7 @@ export default function ShopInfoModal({ shop, onClose }: ShopInfoModalProps) {
           href={googleMapsUrl(shop.address)}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-gray-500 underline-offset-2 hover:text-brand-dark hover:underline"
+          className="text-sm text-gray-500 underline decoration-1 underline-offset-2 hover:text-brand-dark"
         >
           {shop.address}
         </a>

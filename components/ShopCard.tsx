@@ -44,7 +44,7 @@ export default function ShopCard({ shop }: { shop: Shop }) {
           href={googleMapsUrl(shop.address)}
           target="_blank"
           rel="noopener noreferrer"
-          className={`text-sm underline-offset-2 hover:underline ${
+          className={`text-sm underline decoration-1 underline-offset-2 ${
             hasCover ? "text-white/80 hover:text-white" : "text-gray-500 hover:text-brand-dark"
           }`}
         >
