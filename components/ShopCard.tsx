@@ -6,6 +6,7 @@ import ShopLogo from "./ShopLogo";
 import ShopInfoModal from "./ShopInfoModal";
 import CouponFormModal from "./CouponFormModal";
 import type { Shop } from "@/lib/shops";
+import { googleMapsUrl } from "@/lib/googleMaps";
 
 export default function ShopCard({ shop }: { shop: Shop }) {
   const [openModal, setOpenModal] = useState<"info" | "coupon" | null>(null);
@@ -39,9 +40,16 @@ export default function ShopCard({ shop }: { shop: Shop }) {
         <h3 className={`text-lg font-semibold ${hasCover ? "text-white" : "text-gray-900"}`}>
           {shop.name}
         </h3>
-        <p className={`text-sm ${hasCover ? "text-white/80" : "text-gray-500"}`}>
+        <a
+          href={googleMapsUrl(shop.address)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-sm underline-offset-2 hover:underline ${
+            hasCover ? "text-white/80 hover:text-white" : "text-gray-500 hover:text-brand-dark"
+          }`}
+        >
           {shop.address}
-        </p>
+        </a>
 
         <div className="mt-2 flex w-full gap-2">
           <button
