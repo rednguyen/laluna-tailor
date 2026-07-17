@@ -24,7 +24,7 @@ export default function Modal({ title, onClose, children }: ModalProps) {
       onClick={onClose}
     >
       <div
-        className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-xl bg-white p-6 shadow-xl"
+        className="max-h-[90vh] w-full max-w-md overflow-y-auto rounded-xl bg-white p-6 text-left shadow-xl"
         style={{ animation: "modal-in 180ms ease-out" }}
         onClick={(e) => e.stopPropagation()}
       >

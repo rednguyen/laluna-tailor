@@ -6,6 +6,7 @@ type SendCouponEmailArgs = {
   shopName: string;
   firstName: string;
   lastName: string;
+  roomNumber: string;
   email: string;
   phone?: string;
   appointmentTime: string;
@@ -36,6 +37,7 @@ function buildEmailHtml(args: SendCouponEmailArgs): string {
       <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
         <tbody>
           <tr><td style="padding: 4px 0; color: #6b7280;">Shop</td><td style="padding: 4px 0;">${args.shopName}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Room Number</td><td style="padding: 4px 0;">${args.roomNumber}</td></tr>
           <tr><td style="padding: 4px 0; color: #6b7280;">Appointment</td><td style="padding: 4px 0;">${appointment}</td></tr>
           <tr><td style="padding: 4px 0; color: #6b7280;">Phone</td><td style="padding: 4px 0;">${args.phone || "-"}</td></tr>
           <tr><td style="padding: 4px 0; color: #6b7280;">Comments</td><td style="padding: 4px 0;">${args.comments || "-"}</td></tr>

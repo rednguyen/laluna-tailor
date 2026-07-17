@@ -15,6 +15,7 @@ export type FormFieldDef = {
 export const couponFormFields: FormFieldDef[] = [
   { name: "firstName", label: "First Name", type: "text", required: true },
   { name: "lastName", label: "Last Name", type: "text", required: true },
+  { name: "roomNumber", label: "Room Number", type: "text", required: true },
   { name: "email", label: "Email Address", type: "email", required: true },
   { name: "phone", label: "Phone Number", type: "tel", required: false },
   {
@@ -35,6 +36,7 @@ export const couponFormFields: FormFieldDef[] = [
 export const couponFormSchema = z.object({
   firstName: z.string().min(1, "First Name is required"),
   lastName: z.string().min(1, "Last Name is required"),
+  roomNumber: z.string().min(1, "Room Number is required"),
   email: z.string().email("Email Address must be a valid email"),
   phone: z.string().optional().or(z.literal("")),
   appointmentTime: z.string().min(1, "Appointment Date & Time is required"),

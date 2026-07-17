@@ -12,6 +12,8 @@ by email only.
 - **`/api/coupon`** — Next.js Route Handler (runs as a Vercel serverless function) that
   validates the form, generates a `LALUNA-XXXXXXXX` code, and sends the email.
 - **[Resend](https://resend.com)** — transactional email delivery.
+- **[Zalo Bot](https://bot.zapps.me)** — posts a coupon notification to a hotel staff Zalo
+  chat (best-effort: if this fails, the guest's email still goes out).
 - **Zod** — request validation.
 
 ## Local setup
@@ -28,6 +30,8 @@ by email only.
    - `FROM_EMAIL` — an address on a domain verified in Resend (use `onboarding@resend.dev`
      to test before your domain is verified)
    - `HOTEL_EMAIL` — the hotel inbox that should be CC'd on every coupon email
+   - `ZALO_BOT_TOKEN` — token for your Zalo bot
+   - `ZALO_CHAT_ID` — the group/chat id the bot should post coupon notifications into
 3. Run the dev server:
    ```bash
    npm run dev
@@ -46,6 +50,7 @@ by email only.
   the rendered form and the server-side validation — add, remove, reorder, or change
   required/optional there and both sides stay in sync.
 - **Email template / hotel branding**: [lib/email.ts](lib/email.ts).
+- **Zalo staff notification text**: [lib/zalo.ts](lib/zalo.ts).
 - **Coupon code format / discount %**: [lib/coupon.ts](lib/coupon.ts).
 
 ## Deploying to Vercel
@@ -53,8 +58,9 @@ by email only.
 1. Push this repo to GitHub (or GitLab/Bitbucket).
 2. In [Vercel](https://vercel.com/new), import the repo — it auto-detects Next.js, no
    config needed.
-3. Add the three environment variables from `.env.example` under **Project Settings →
-   Environment Variables** (`RESEND_API_KEY`, `FROM_EMAIL`, `HOTEL_EMAIL`).
+3. Add the environment variables from `.env.example` under **Project Settings →
+   Environment Variables** (`RESEND_API_KEY`, `FROM_EMAIL`, `HOTEL_EMAIL`, `ZALO_BOT_TOKEN`,
+   `ZALO_CHAT_ID`).
 4. Deploy. Point your QR code at the resulting `*.vercel.app` URL (or a custom domain
    added in Vercel's Domains settings).
 

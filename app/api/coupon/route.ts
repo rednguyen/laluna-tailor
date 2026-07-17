@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { couponFormSchema } from "@/lib/formFields";
 import { generateCouponCode } from "@/lib/coupon";
 import { sendCouponEmail } from "@/lib/email";
+import { sendCouponZaloNotification } from "@/lib/zalo";
 
 export async function POST(request: NextRequest) {
   let body: unknown;
@@ -28,6 +29,7 @@ export async function POST(request: NextRequest) {
       shopName: data.shopName,
       firstName: data.firstName,
       lastName: data.lastName,
+      roomNumber: data.roomNumber,
       email: data.email,
       phone: data.phone,
       appointmentTime: data.appointmentTime,
@@ -39,6 +41,22 @@ export async function POST(request: NextRequest) {
       { error: "Could not send confirmation email. Please try again later." },
       { status: 502 }
     );
+  }
+
+  try {
+    await sendCouponZaloNotification({
+      couponCode,
+      shopName: data.shopName,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      roomNumber: data.roomNumber,
+      email: data.email,
+      phone: data.phone,
+      appointmentTime: data.appointmentTime,
+      comments: data.comments,
+    });
+  } catch (err) {
+    console.error("Failed to send Zalo notification", err);
   }
 
   return NextResponse.json({ couponCode });
