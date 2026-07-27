@@ -1,0 +1,317 @@
+[
+  {
+    "category": "Laluna Signature Packages",
+    "items": [
+      {
+        "name": "Embrace Relaxation 1:30'",
+        "description": "A combination of Hot Stone full body massage using warm smooth stones followed by a refreshing facial pampering. Includes: Hot Stone Body Massage 60', Refresh Facial 30'.",
+        "price": 36.5
+      },
+      {
+        "name": "Indulge in Luxury 90'",
+        "description": "Hot Stone full body massage combined with a soothing foot scrub. Includes: Hot Stone Body Massage 60', Foot Care 30'.",
+        "price": 29.5
+      },
+      {
+        "name": "Premium Wellness Package 2:15'",
+        "description": "This exquisite face and foot ritual is a journey of renewal, gently stimulating energy flow, releasing toxins, and toning facial muscles. As you surrender to the experience, a profound sense of relaxation washes over you, soothing every inch of your being. From head to toe, you'll feel deeply revitalized, as if the stresses of daily life have melted away. Includes: Lifting Feather 45', Hot Stone Massage 90'.",
+        "price": 47.5
+      },
+      {
+        "name": "Your Path to Serenity Spa Day Package 4:05'",
+        "description": "An unforgettable half-day experience featuring five exquisite treatments designed to rejuvenate mind, body, and soul. Begin with a choice of a soothing sauna or a refreshing herbal bath, then immerse yourself in a Relaxation Treatment where gentle massage and aromatic essential oils melt away tension. Follow with the signature Laluna Body Scrub, and finish with a nourishing face mask that restores moisture and leaves the complexion radiant. Includes: Laluna Spa Body Scrub 45', Relaxation Treatment 90', Silky Beauty 60', Foot Care 30', Sauna 20'.",
+        "price": 80
+      }
+    ]
+  },
+  {
+    "category": "Relaxing Moment",
+    "items": [
+      {
+        "name": "Head, Neck, Back & Shoulders Massage 45'",
+        "description": "A short treatment for guests with limited time.",
+        "price": 15
+      },
+      {
+        "name": "Hand, Head, Neck & Shoulders Massage 30'",
+        "description": "A short treatment for guests with limited time.",
+        "price": 11
+      },
+      {
+        "name": "Foot Rest Massage 30'",
+        "description": "A short treatment for guests with limited time.",
+        "price": 11
+      }
+    ]
+  },
+  {
+    "category": "Facial",
+    "items": [
+      {
+        "name": "Basic Facial Care 45'",
+        "description": "A rejuvenating facial that begins with a thorough cleanse and gentle exfoliation, followed by a calming facial massage to relax and restore. The experience concludes with a luxurious moisturizing treatment, using the finest skincare products to leave your skin feeling refreshed, deeply nourished, and radiant.",
+        "price": 15.5
+      },
+      {
+        "name": "Natural Skin Dream 60'",
+        "description": "This facial is truly an experience in itself. Featuring a natural yogurt-based mask, it cleanses, soothes, nourishes, and balances the skin in one harmonious treatment. The result is a complexion that feels deeply refreshed, radiant, and glowing with vitality.",
+        "price": 20
+      },
+      {
+        "name": "Silky Beauty 60'",
+        "description": "The experience begins with a gentle skin cleanse and soothing massage, followed by the application of a thin, luxurious cream mask. As the mask works its magic, a calming head massage stimulates the nerves and blood flow beneath the skin, easing tension and promoting relaxation. Once the mask is removed, your face is moisturized, leaving your skin soft, silky, and beautifully smooth.",
+        "price": 20
+      },
+      {
+        "name": "Lifting Feather 60'",
+        "description": "Indulge in total relaxation with a traditional Vietnamese manual facelift technique, expertly designed to lift and rejuvenate. A nourishing clay mask is then applied, drawing out excess oil while locking in moisture and hydration. This bespoke facial treatment leaves your skin feeling effortlessly light, refreshed, and renewed, as if lifted by a gentle breeze.",
+        "price": 20
+      },
+      {
+        "name": "Anti-Aging Facial Treatment with Collagen Mask 75'",
+        "description": "The intensive collagen mask penetrates deeply into the skin, helping to diminish the appearance of wrinkles while promoting a smoother, firmer, and more youthful complexion.",
+        "price": 23.5
+      }
+    ]
+  },
+  {
+    "category": "Body Massage",
+    "items": [
+      {
+        "name": "Relaxation Treatment 60'",
+        "description": "Through the application of gentle, soothing massage techniques and locally sourced aromatic oils, this treatment is designed to melt away tension, ease swollen or aching joints, and restore emotional balance, leaving you feeling deeply relaxed and harmonized.",
+        "price": 18
+      },
+      {
+        "name": "Tension Relief Therapy 60'",
+        "description": "Through the use of deep, invigorating massage techniques and aromatic essential oils, this treatment focuses on key muscle groups to alleviate aches and pains. The smooth, rhythmic movements not only enhance circulation but also promote an overall sense of well-being and balance, leaving you feeling revitalized and harmonized.",
+        "price": 19.5
+      },
+      {
+        "name": "Traditional Thai Massage 60'",
+        "description": "Originating from Thailand, this therapy is a time-honored healing practice that blends acupressure, gentle stretching, rhythmic pressure on the muscles, and yoga-inspired positions. The result is a revitalizing surge of energy that leaves you feeling refreshed and rejuvenated.",
+        "price": 21.5
+      },
+      {
+        "name": "Vietnamese Bamboo Body Massage 75'",
+        "description": "A harmonious blend of bamboo and traditional massage techniques. The therapist uses bamboo sticks, warmed to the perfect temperature, to gently work into the muscle tissue and joints. Through techniques such as rolling, tapping, and various directional movements, this treatment helps alleviate muscle tension, reduce pain, and address a range of health concerns. The therapy also promotes deep relaxation, leaving you feeling both rejuvenated and at ease.",
+        "price": 25.5
+      },
+      {
+        "name": "Hot Stone Massage 75'",
+        "description": "Hot stone massage gently dissolves muscle tension and stress by placing warm, smooth stones on key areas of the body. The heat from the stones penetrates deeply into the muscles, promoting relaxation and a soothing sense of well-being, leaving you calm, centered, and fully at ease.",
+        "price": 25.5
+      },
+      {
+        "name": "Laluna Hot Herbal Therapy 75'",
+        "description": "The therapist begins the treatment by applying essential oils to warm the body, creating a soothing and calming effect. Next, heated herbal pouches are gently massaged onto the skin, helping to open the pores and allow the heat to penetrate deep into the muscles, providing relief from pain and promoting overall relaxation.",
+        "price": 23.5
+      },
+      {
+        "name": "Pregnancy Massage 60'",
+        "description": "This treatment offers not only deep relaxation but also a range of benefits during pregnancy. It helps to relieve stress, improve blood circulation, and reduce common discomforts such as insomnia, edema, headaches, and high blood pressure. The result is a sense of refreshment and comfort, leaving you feeling rejuvenated and at ease.",
+        "price": 18
+      },
+      {
+        "name": "Four-Hands Massage by Laluna Spa 75'",
+        "description": "A truly luxurious and relaxing experience for your body, this treatment involves two therapists working in perfect harmony with synchronized movements. Their expertly choreographed touch gently glides over the skin, guiding you into a state of deep relaxation. As tension melts away, your body enters a state of optimal rest, releasing muscle aches, improving circulation, and alleviating stress and anxiety.",
+        "price": 43
+      },
+      {
+        "name": "Foot Reflexology 60'",
+        "description": "Experience complete healing and well-being as your therapist targets the pressure points on your feet with a deep tissue massage using aromatic essential oils. This treatment draws on the principles of Reflexology, promoting balance and relaxation throughout the body. As the massage unfolds, the oils nourish your skin, leaving it feeling soft, smooth, and rejuvenated.",
+        "price": 16
+      },
+      {
+        "name": "Foot Remedy 60'",
+        "description": "A soothing foot massage with the therapeutic warmth of hot stones applied to your legs and feet. The feet, resilient to heat, respond beautifully to the combination of pressure massage and the gentle warmth of the stones, inducing deep relaxation. This treatment helps to restore balance, rejuvenate the body, and provide a sense of calm and renewal.",
+        "price": 17.5
+      },
+      {
+        "name": "Total Foot Treatment 75'",
+        "description": "The ultimate indulgence and complete care for your feet, this treatment combines a focused foot massage on key pressure points with both dry and wet scrubs to exfoliate and remove dead skin, leaving your feet feeling soft and silky smooth. It's a revitalizing 'facelift' for your feet, restoring freshness and vitality with every step.",
+        "price": 20
+      }
+    ]
+  },
+  {
+    "category": "Body Skin Care",
+    "items": [
+      {
+        "name": "Laluna Spa Body Scrub 60'",
+        "description": "Laluna Spa's moisturizing body scrub offers a deeply cleansing and exfoliating experience. It effectively removes dead skin cells while encouraging the growth of healthy new ones. Enriched with mineral sea salt and olive oil, this treatment eliminates impurities and stimulates circulation, leaving your skin feeling refreshed, smooth, and revitalized.",
+        "price": 18.5
+      },
+      {
+        "name": "Honey and Sesame Body Scrub 60'",
+        "description": "For a soothing path to soft, radiant skin, this body scrub gently exfoliates the buildup of dead skin cells that can dull your complexion, while boosting circulation and leaving your skin incredibly smooth. The nourishing honey works to hydrate and moisturize, enhancing your skin's natural glow. The treatment concludes with a refreshing shower, followed by a relaxing mini massage and the application of an organic body moisturizer.",
+        "price": 18.5
+      },
+      {
+        "name": "Coffee & Orange Body Scrub 60'",
+        "description": "This invigorating coffee scrub harnesses the natural acids in coffee to exfoliate dead skin cells and smooth away roughness, while the nourishing blend of rice and milk tones and rejuvenates tired skin. The treatment concludes with a refreshing shower, followed by a soothing mini massage and the application of an Organic Body Moisturizer, leaving your skin soft, hydrated, and revitalized.",
+        "price": 18.5
+      },
+      {
+        "name": "Mud & Milk Body Wrap 60'",
+        "description": "Harnessing the power of natural vitamins and minerals, this body wrap enhances the appearance and texture of your skin. It works to draw out toxins, while deeply hydrating, toning, and smoothing the skin, leaving you with a refreshed, rejuvenated glow.",
+        "price": 18.5
+      },
+      {
+        "name": "Aloe Vera & Yogurt Body Wrap 60'",
+        "description": "Aloe vera, rich in amino acids, rejuvenates tired, dull skin, restoring its natural vibrancy. It is also the perfect remedy for sunburn, offering soothing relief and providing a comforting, cooling sensation to the skin.",
+        "price": 18.5
+      },
+      {
+        "name": "Botanical Body Wrap 60'",
+        "description": "This luxurious body wrap, enriched with the natural goodness of honey, oatmeal, and fresh milk, delivers a deeply moisturizing treatment that nourishes and balances your skin, leaving it soft, smooth, and beautifully hydrated.",
+        "price": 18.5
+      }
+    ]
+  },
+  {
+    "category": "Extra Pampering",
+    "items": [
+      {
+        "name": "Sauna 30'",
+        "description": "Availability of service depends on the property.",
+        "price": 9.5
+      }
+    ]
+  },
+  {
+    "category": "Special Packages",
+    "items": [
+      {
+        "name": "Forest Package 2hrs",
+        "description": "Vietnam's lush, fertile forests are rich in natural, organic healing ingredients, many of which are thoughtfully incorporated into Laluna Spa's treatments. The Forest Package offers a rejuvenating head-to-toe experience, featuring a full-body scrub, gentle care for your feet, and a calming facial. Includes: Laluna Spa Body Scrub 45', Foot Rest Massage 30', Basic Facial Care 45'.",
+        "price": 38
+      },
+      {
+        "name": "Ocean Package 2hrs 45'",
+        "description": "The oceans are rich in natural minerals and trace elements that help detoxify the body, oxygenate cells, hydrate, and revitalize the skin. A mineral-rich sea salt scrub deeply cleanses and nourishes, while a full-body massage with salt stones infuses essential minerals into the skin. The experience is completed with a soothing all-in-one facial treatment. Includes: Laluna Spa Body Scrub 45', Laluna Herbal Hot Therapy 60', Natural Skin Dream 60'.",
+        "price": 49
+      },
+      {
+        "name": "Earth Package 3hrs 20'",
+        "description": "This package harnesses the finest gifts the earth offers, including healing herbs, essential oils from trees and plants, and mineral-rich mud products. The combination of four rejuvenating treatments will leave you deeply relaxed, cleansed, and your skin feeling incredibly soft and smooth. Includes: Tension Relief Therapy 90', Coffee & Orange Scrub 45', Mud & Milk Body Wrap 45', Sauna 20'.",
+        "price": 63
+      },
+      {
+        "name": "Sky Package 3hrs 45'",
+        "description": "This ultimate pampering experience includes a full-body massage, complete foot therapy, and a soothing remedy for oily skin, leaving you feeling like the sky's the limit. Includes: Laluna Spa Body Scrub 45', Relaxation Treatment 90', Lifting Feather 45', Manicure or Pedicure Gel Color 45'.",
+        "price": 65
+      }
+    ]
+  },
+  {
+    "category": "Nail Service - Manicure",
+    "items": [
+      {
+        "name": "Cuticle Work for Hand without Nail Color 30'",
+        "description": "Nail trimming, shaping, hand soak, cuticle grooming and nail buffing.",
+        "price": 5.5
+      },
+      {
+        "name": "Nail Lacquer for Fingers 20'",
+        "description": "Nail lacquer application for fingers.",
+        "price": 5
+      },
+      {
+        "name": "Basic Color 45'",
+        "description": "Nail trimming, shaping, hand soak, cuticle grooming and nail buffing and nail polish.",
+        "price": 8
+      },
+      {
+        "name": "Basic Gel Color 45'",
+        "description": "Nail trimming, shaping, hand soak, cuticle grooming and nail buffing and gel color.",
+        "price": 11.5
+      },
+      {
+        "name": "Laluna Manicure 60'",
+        "description": "Nail trimming, shaping, hand soak, hand scrub, cuticle grooming and nail buffing, hand massage and nail polish.",
+        "price": 11.5
+      },
+      {
+        "name": "Manicure for Children 20'",
+        "description": "Manicure service for children.",
+        "price": 5
+      }
+    ]
+  },
+  {
+    "category": "Nail Service - Pedicure",
+    "items": [
+      {
+        "name": "Cuticle Work for Feet without Nail Color 30'",
+        "description": "Nail trimming, shaping, foot soak, cuticle grooming and nail buffing.",
+        "price": 5.5
+      },
+      {
+        "name": "Nail Lacquer for Toes 20'",
+        "description": "Nail lacquer application for toes.",
+        "price": 5
+      },
+      {
+        "name": "Basic Color 45'",
+        "description": "Nail trimming, shaping, foot soak, cuticle grooming and nail buffing and nail polish.",
+        "price": 8
+      },
+      {
+        "name": "Basic Gel Color 45'",
+        "description": "Nail trimming, shaping, foot soak, cuticle grooming and nail buffing and gel color.",
+        "price": 11.5
+      },
+      {
+        "name": "Laluna Pedicure 60'",
+        "description": "Nail trimming, shaping, foot soak, foot scrub, heel scrub, cuticle grooming and nail buffing, foot massage and nail polish.",
+        "price": 11.5
+      },
+      {
+        "name": "Pedicure for Children 20'",
+        "description": "Pedicure service for children.",
+        "price": 5
+      }
+    ]
+  },
+  {
+    "category": "Nail Service - Extra",
+    "items": [
+      {
+        "name": "Take Off Gel Polish 15-30'",
+        "description": "Removal of existing gel polish.",
+        "price": 5.5
+      },
+      {
+        "name": "Heel Scrub 40'",
+        "description": "Exfoliating scrub treatment for the heels.",
+        "price": 6.5
+      },
+      {
+        "name": "Art",
+        "description": "Nail art.",
+        "price": 3.5
+      },
+      {
+        "name": "Special Design",
+        "description": "Special nail design (price ranges from 550,000 to 900,000).",
+        "price": 17
+      }
+    ]
+  },
+  {
+    "category": "Hair Washing",
+    "items": [
+      {
+        "name": "Hair Washing + Neck & Shoulder Head Massage 45'",
+        "description": "Hair washing combined with a neck, shoulder and head massage.",
+        "price": 14
+      },
+      {
+        "name": "Hair Washing + Facial Cleansing 45'",
+        "description": "Hair washing combined with a facial cleansing treatment.",
+        "price": 14
+      }
+    ]
+  }
+]

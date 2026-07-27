@@ -1,0 +1,192 @@
+[
+  {
+    "category": "Appetizer & Salad",
+    "items": [
+      {
+        "name": "Trio of Salmon Maison Style",
+        "description_vi": "Cá Hồi 3 vị",
+        "price_usd": 7.5
+      },
+      {
+        "name": "Concoction of Baby Lettuce Salad",
+        "description_vi": "Xà lách trộn măng tây, cà chua bi, hạnh nhân",
+        "price_usd": 6.5
+      },
+      {
+        "name": "Traditional Caesar Salad",
+        "description_vi": "Xà lách Caesar cổ truyền với thịt gà nướng",
+        "price_usd": 7.5
+      },
+      {
+        "name": "Tiger Prawn in Sugar Cane",
+        "description_vi": "Tôm bọc mía",
+        "price_usd": 6.5
+      },
+      {
+        "name": "Vietnamese Fresh Spring Roll",
+        "description_vi": "Gỏi cuốn tôm thịt",
+        "price_usd": 4.5
+      },
+      {
+        "name": "Hoi An Crispy Spring Roll",
+        "description_vi": "Chả giò chiên giòn Hội An",
+        "price_usd": 5.5
+      },
+      {
+        "name": "Hoi An White Rose Dumpling",
+        "description_vi": "Bánh bông hồng trắng Hội An",
+        "price_usd": 5.5
+      },
+      {
+        "name": "Green Mango Salad with Grilled Pork",
+        "description_vi": "Gỏi xoài xanh với thịt heo nướng",
+        "price_usd": 5.5
+      }
+    ]
+  },
+  {
+    "category": "Soup",
+    "items": [
+      {
+        "name": "Phở - The Original",
+        "description_vi": "Phở Truyền Thống - 24 nguyên liệu nấu trong nước dùng bò",
+        "price_usd": 4.5
+      },
+      {
+        "name": "Beef Wonton Soup",
+        "description_vi": "Súp hoành thánh nhân thịt bò với trứng chần",
+        "price_usd": 4.5
+      },
+      {
+        "name": "Cream Pumpkin Soup with Grilled Tiger Prawn",
+        "description_vi": "Súp kem bí đỏ với tôm sú nướng",
+        "price_usd": 6.5
+      }
+    ]
+  },
+  {
+    "category": "Spaghetti or Penne",
+    "items": [
+      {
+        "name": "Spaghetti with Carbonara Sauce",
+        "description_vi": "Mì Ý sốt kem và thịt xông khói",
+        "price_usd": 6.5
+      },
+      {
+        "name": "Penne with Beef Bolognese Sauce",
+        "description_vi": "Mì Ý sốt thịt bò hầm cà chua",
+        "price_usd": 7.0
+      }
+    ]
+  },
+  {
+    "category": "Pizza",
+    "items": [
+      {
+        "name": "Margherita",
+        "description_vi": "Pizza cổ truyền, cà chua, phô mai",
+        "price_usd": 6.0
+      },
+      {
+        "name": "Hawaiian Pizza",
+        "description_vi": "Pizza kiểu Hawaiian",
+        "price_usd": 6.5
+      },
+      {
+        "name": "Seafood Pizza",
+        "description_vi": "Pizza hải sản, tôm, mực, phô mai",
+        "price_usd": 7.5
+      }
+    ]
+  },
+  {
+    "category": "Burger - Snack",
+    "items": [
+      {
+        "name": "French Fries",
+        "description_vi": "Khoai Tây Chiên",
+        "price_usd": 3.0
+      },
+      {
+        "name": "Beef Burger",
+        "description_vi": "Burger Thịt Bò",
+        "price_usd": 7.0
+      },
+      {
+        "name": "Chicken Burger",
+        "description_vi": "Burger Thịt Gà",
+        "price_usd": 6.0
+      },
+      {
+        "name": "Fish and Chips",
+        "description_vi": "Cá chiên giòn ăn kèm với sốt, khoai tây nghiền",
+        "price_usd": 6.5
+      },
+      {
+        "name": "Chicken Nuggets",
+        "description_vi": "Gà tẩm bột chiên giòn ăn kèm với sốt",
+        "price_usd": 5.0
+      }
+    ]
+  },
+  {
+    "category": "Main Courses",
+    "items": [
+      {
+        "name": "Grilled Striploin Steak",
+        "description_vi": "Thăn ngoại bò úc nướng",
+        "price_usd": 11.5
+      },
+      {
+        "name": "Grilled Australian Beef Tenderloin",
+        "description_vi": "Thăn nội bò úc nướng",
+        "price_usd": 15.0
+      },
+      {
+        "name": "Seared Salmon with Mustard",
+        "description_vi": "Cá hồi nướng ăn kèm sốt mù tạt",
+        "price_usd": 10.5
+      },
+      {
+        "name": "Grilled Chicken Breast",
+        "description_vi": "Ức gà nướng ăn kèm rau củ, khoai tây nghiền và sốt nấm",
+        "price_usd": 8.5
+      },
+      {
+        "name": "Hoi An Chicken Rice",
+        "description_vi": "Cơm gà Hội An",
+        "price_usd": 4.5
+      }
+    ]
+  },
+  {
+    "category": "Desserts",
+    "items": [
+      {
+        "name": "Sweet Vietnamese Black Sticky Rice",
+        "description_vi": "Chè nếp cẩm",
+        "price_usd": 4.0
+      },
+      {
+        "name": "Fresh Fruit Platter",
+        "description_vi": "Trái cây theo mùa",
+        "price_usd": 4.5
+      },
+      {
+        "name": "Vanilla Ice Cream",
+        "description_vi": "Kem lạnh vani",
+        "price_usd": 4.5
+      },
+      {
+        "name": "Strawberry Ice Cream",
+        "description_vi": "Kem lạnh dâu tây",
+        "price_usd": 4.5
+      },
+      {
+        "name": "Chocolate Ice Cream",
+        "description_vi": "Kem lạnh socola",
+        "price_usd": 4.5
+      }
+    ]
+  }
+]

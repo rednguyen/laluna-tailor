@@ -1,9 +1,17 @@
-# Laluna Tailor Coupon Landing Page
+# Laluna Guest Services
 
-QR-code landing page for guests of Laluna Hoi An Riverside Hotel & Spa. Guests browse 4
-partner tailor shops, view info, and request a 10%-off coupon that's emailed to them
-(with the hotel CC'd). No database — coupon codes are generated on the fly and delivered
-by email only.
+Guest services site for Laluna Hoi An Riverside Hotel & Spa, meant to be reached via
+`www.lalunahoian.services` (typically via a QR code in-room). The homepage (`/`) lets
+guests choose between service categories:
+
+- **`/tailor`** — 4 partner tailor shops; guests can view shop info and request a
+  10%-off coupon, emailed to them (hotel CC'd, plus a staff Zalo notification). No
+  database — coupon codes are generated on the fly and delivered by email only.
+- **`/combo-package`** — dining, spa, and tour packages. Currently a placeholder page;
+  build this out the same way `/tailor` was built once that content is ready.
+
+Shared header/footer (hotel branding, contact info) live in the root layout, so they
+appear on every route automatically.
 
 ## Stack
 
@@ -40,9 +48,10 @@ by email only.
 
 ## Editing content
 
-- **Hotel logo**: drop the file at `public/logo.png` (displayed in the page header via
+- **Hotel logo**: drop the file at `public/logo.png` (displayed in the shared header via
   [components/HotelLogo.tsx](components/HotelLogo.tsx)). Until it's added, the header just
   shows the hotel name text — no broken image icon.
+- **Homepage nav cards** (Tailor Services / Combo Package): [app/page.tsx](app/page.tsx).
 - **Shops** (name, address, logo, description/story): [lib/shops.ts](lib/shops.ts).
   Drop logo images into [public/shops/](public/shops/) matching the filenames referenced
   there. If a logo is missing, the card falls back to a circle with the shop's initials.
@@ -61,8 +70,10 @@ by email only.
 3. Add the environment variables from `.env.example` under **Project Settings →
    Environment Variables** (`RESEND_API_KEY`, `FROM_EMAIL`, `HOTEL_EMAIL`, `ZALO_BOT_TOKEN`,
    `ZALO_CHAT_ID`).
-4. Deploy. Point your QR code at the resulting `*.vercel.app` URL (or a custom domain
-   added in Vercel's Domains settings).
+4. Deploy. Under **Project Settings → Domains**, add `www.lalunahoian.services` and
+   follow Vercel's instructions to point its DNS (a `CNAME` record) at Vercel. Point
+   your QR code at `https://www.lalunahoian.services/tailor` once that's live (or the
+   `*.vercel.app` URL in the meantime).
 
 For real deliverability, verify your own sending domain in Resend (Resend dashboard →
 Domains) and use an address on it for `FROM_EMAIL` — the shared `onboarding@resend.dev`

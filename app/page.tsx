@@ -1,30 +1,40 @@
-import ShopCard from "@/components/ShopCard";
-import HotelLogo from "@/components/HotelLogo";
-import Footer from "@/components/Footer";
-import { shops } from "@/lib/shops";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-brand-50">
-      <header className="border-b-2 border-brand bg-brand-contrast px-6 py-8 text-center">
-        <HotelLogo />
-        <h1 className="text-2xl font-bold text-white">
-          Laluna Hoi An Riverside Hotel &amp; Spa
-        </h1>
-        <p className="mt-1 text-sm text-white/70">
-          Our recommended tailor shops — get your exclusive discount coupon below
+    <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center gap-8 px-4 py-16 text-center">
+      <div>
+        <h2 className="text-xl font-semibold text-brand-contrast">Welcome, valued guest</h2>
+        <p className="mt-1 text-sm text-gray-600">
+          Choose a service to explore exclusive offers curated for you.
         </p>
-      </header>
+      </div>
 
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {shops.map((shop) => (
-            <ShopCard key={shop.id} shop={shop} />
-          ))}
-        </div>
-      </main>
+      <div className="grid w-full gap-4 sm:grid-cols-2">
+        <Link
+          href="/tailor"
+          className="group rounded-2xl border border-gray-200 bg-white p-8 text-left shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+        >
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-dark">
+            Tailor Services
+          </h3>
+          <p className="mt-2 text-sm text-gray-500">
+            Exclusive discount coupons from our partner tailor shops in Hoi An.
+          </p>
+        </Link>
 
-      <Footer />
+        <Link
+          href="/combo-package"
+          className="group rounded-2xl border border-gray-200 bg-white p-8 text-left shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+        >
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-dark">
+            Combo Package
+          </h3>
+          <p className="mt-2 text-sm text-gray-500">
+            Dining, spa, and tour packages exclusively for our guests.
+          </p>
+        </Link>
+      </div>
     </div>
   );
 }

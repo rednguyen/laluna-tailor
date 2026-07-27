@@ -1,9 +1,27 @@
 import { Resend } from "resend";
 import { couponDiscountPercent } from "./coupon";
+import { formatUsd } from "./diningMenu";
 
 type SendCouponEmailArgs = {
   couponCode: string;
   shopName: string;
+  firstName: string;
+  lastName: string;
+  roomNumber: string;
+  email: string;
+  phone?: string;
+  appointmentTime: string;
+  comments?: string;
+};
+
+type SendComboBookingEmailArgs = {
+  comboName: string;
+  mainDish: string;
+  spaTreatment: string;
+  appetizer: string;
+  dessert: string;
+  secondo?: string;
+  totalCost: number;
   firstName: string;
   lastName: string;
   roomNumber: string;
@@ -20,6 +38,30 @@ function formatAppointmentTime(raw: string): string {
     dateStyle: "full",
     timeStyle: "short",
   });
+}
+
+async function sendViaResend(args: { to: string; subject: string; html: string }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.FROM_EMAIL;
+  const hotelEmail = process.env.HOTEL_EMAIL;
+
+  if (!apiKey || !fromEmail) {
+    throw new Error("Missing email configuration: RESEND_API_KEY and FROM_EMAIL must be set.");
+  }
+
+  const resend = new Resend(apiKey);
+
+  const { error } = await resend.emails.send({
+    from: fromEmail,
+    to: args.to,
+    cc: hotelEmail,
+    subject: args.subject,
+    html: args.html,
+  });
+
+  if (error) {
+    throw new Error(`Failed to send email: ${error.message}`);
+  }
 }
 
 function buildEmailHtml(args: SendCouponEmailArgs): string {
@@ -51,27 +93,50 @@ function buildEmailHtml(args: SendCouponEmailArgs): string {
 }
 
 export async function sendCouponEmail(args: SendCouponEmailArgs) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.FROM_EMAIL;
-  const hotelEmail = process.env.HOTEL_EMAIL;
-
-  if (!apiKey || !fromEmail) {
-    throw new Error(
-      "Missing email configuration: RESEND_API_KEY and FROM_EMAIL must be set."
-    );
-  }
-
-  const resend = new Resend(apiKey);
-
-  const { error } = await resend.emails.send({
-    from: fromEmail,
+  await sendViaResend({
     to: args.email,
-    cc: hotelEmail,
     subject: `Your ${couponDiscountPercent}% Off Coupon for ${args.shopName}`,
     html: buildEmailHtml(args),
   });
+}
 
-  if (error) {
-    throw new Error(`Failed to send email: ${error.message}`);
-  }
+function buildComboBookingEmailHtml(args: SendComboBookingEmailArgs): string {
+  const appointment = formatAppointmentTime(args.appointmentTime);
+
+  return `
+    <div style="font-family: Arial, sans-serif; max-width: 560px; margin: 0 auto; color: #1f2937;">
+      <h1 style="color: #0f4c81;">Laluna Hoi An Riverside Hotel &amp; Spa</h1>
+      <p>Dear ${args.firstName} ${args.lastName},</p>
+      <p>Thank you for booking the <strong>${args.comboName}</strong> combo package! Here is a summary of your request:</p>
+      <div style="background: #f3f4f6; border-radius: 8px; padding: 16px 20px; margin: 20px 0; text-align: center;">
+        <p style="margin: 0; font-size: 14px; color: #6b7280;">Total Cost</p>
+        <p style="margin: 4px 0 0; font-size: 24px; font-weight: bold; color: #0f4c81;">${formatUsd(args.totalCost)}</p>
+      </div>
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+        <tbody>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Combo</td><td style="padding: 4px 0;">${args.comboName}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Appetizer &amp; Salad</td><td style="padding: 4px 0;">${args.appetizer}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Main Course</td><td style="padding: 4px 0;">${args.mainDish}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Dessert</td><td style="padding: 4px 0;">${args.dessert}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Secondo</td><td style="padding: 4px 0;">${args.secondo || "-"}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Spa Treatment</td><td style="padding: 4px 0;">${args.spaTreatment}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Room Number</td><td style="padding: 4px 0;">${args.roomNumber}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Appointment</td><td style="padding: 4px 0;">${appointment}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Phone</td><td style="padding: 4px 0;">${args.phone || "-"}</td></tr>
+          <tr><td style="padding: 4px 0; color: #6b7280;">Comments</td><td style="padding: 4px 0;">${args.comments || "-"}</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 24px;">Our team will follow up shortly to confirm your booking.</p>
+      <p>We hope you enjoy your stay!</p>
+      <p style="color: #6b7280; font-size: 12px; margin-top: 32px;">Laluna Hoi An Riverside Hotel &amp; Spa</p>
+    </div>
+  `;
+}
+
+export async function sendComboBookingEmail(args: SendComboBookingEmailArgs) {
+  await sendViaResend({
+    to: args.email,
+    subject: `Your ${args.comboName} Booking Request`,
+    html: buildComboBookingEmailHtml(args),
+  });
 }
